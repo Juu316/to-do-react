@@ -1,0 +1,56 @@
+.App {
+  display: flex;
+  justify-content: center;
+}
+.Main {
+  margin-top: 2%;
+  background-color: lemonchiffon;
+  width: 20vw;
+  min-height: 30vh;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.addButton {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background-color: aquamarine;
+  /* margin-left: 1rem; */
+}
+
+.addButton:hover {
+  background-color: red;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+  height: 5rem;
+  width: 20rem;
+  font-size: 2rem;
+}
+.containerOfTextAndButton {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.stateButtons {
+  display: flex;
+  justify-content: space-around;
+}
+#allB {
+  width: 6rem;
+}
+#activeB {
+  width: 6rem;
+}
+#completedB {
+  width: 6rem;
+}
+footer {
+  margin-top: 5rem;
+}
