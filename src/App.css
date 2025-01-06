@@ -16,11 +16,12 @@
   margin-bottom: 1rem;
 }
 .addButton {
-  width: 4rem;
+  width: 6rem;
   height: 4rem;
   border-radius: 1rem;
   background-color: aquamarine;
   /* margin-left: 1rem; */
+  font-size: 3rem;
 }
 
 .addButton:hover {
@@ -53,4 +54,7 @@ textarea {
 }
 footer {
   margin-top: 5rem;
+}
+.plus {
+  font-size: 3rem;
 }
