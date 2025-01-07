@@ -157,7 +157,11 @@ function App() {
       console.log("If is working here");
     }
   }
-
+  const handleEnter = (event) => {
+    if (event.key === "Enter") {
+      handleAddButtonClick();
+    }
+  };
   function doInputValue(utga) {
     setInputValue(utga.target.value);
   }
@@ -211,6 +215,7 @@ function App() {
                 {todo.text}
               </div>
             ))}
+          <div className="footer">Made in Mongolia</div>
         </div>
       </div>
     </div>
