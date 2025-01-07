@@ -1,9 +1,14 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
   display: flex;
   justify-content: center;
 }
 .Main {
-  margin-top: 2%;
+  padding-top: 60px;
   background-color: lemonchiffon;
   width: 20vw;
   min-height: 30vh;
@@ -20,7 +25,7 @@
   height: 4rem;
   border-radius: 1rem;
   background-color: aquamarine;
-  /* margin-left: 1rem; */
+ 
   font-size: 3rem;
 }
 
@@ -57,4 +62,83 @@ footer {
 }
 .plus {
   font-size: 3rem;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.Container {
+  padding-top: 4.75rem;
+  background-color: #f3f5f7;
+  min-height: 100vh;
+}
+.Mainpart {
+  width: 377px;
+  padding: 24px 16px;
+  border-radius: 8px;
+  margin-inline: auto;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.16);
+}
+.garchig {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form1 {
+  display: flex;
+  height: 40px;
+  column-gap: 6px;
+}
+.input1 {
+  /* flex: 1 1; */
+  outline: none;
+  font-size: 14px;
+  border-radius: 6px;
+  padding-inline: 16px;
+  border: 1px solid #e4e4e7;
+}
+.addButton {
+  width: 59px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #f9f9f9;
+  border-radius: 6px;
+  padding-inline: 16px;
+  background-color: #3c82f6;
+}
+.states {
+  height: 32px;
+  display: flex;
+  column-gap: 6px;
+  margin-block: 20px;
+}
+/* .buttonAll {
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding-inline: 12px;
+  transition: all 0.2s;
+} */
+
+.buttonCompleted,
+.buttonActive,
+.buttonAll {
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding-inline: 12px;
+  transition: all 0.2s ease-in-out;
 }
