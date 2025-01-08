@@ -228,13 +228,6 @@ import React, { useState } from "react";
 import "./App.css";
 import { v4 as uuidv4 } from "uuid"; // ID for our tasks
 
-// eniig zaaval App()-iin gadna ugnu!
-const todos = {
-  text: "do homework",
-  status: "ACTIVE" | "COMPLETED",
-  id: 1,
-};
-
 function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
