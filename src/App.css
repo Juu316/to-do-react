@@ -1,152 +1,6 @@
-/* * {
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
 }
-.App {
-  display: flex;
-  justify-content: center;
-}
-.Main {
-  padding-top: 60px;
-  background-color: lemonchiffon;
-  width: 20vw;
-  min-height: 30vh;
-  border-radius: 1rem;
-  padding: 1rem;
-}
-.title {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.addButton {
-  width: 6rem;
-  height: 4rem;
-  border-radius: 1rem;
-  background-color: aquamarine;
- 
-  font-size: 3rem;
-}
-
-.addButton:hover {
-  background-color: red;
-}
-textarea {
-  resize: none;
-  overflow: auto;
-  height: 5rem;
-  width: 20rem;
-  font-size: 2rem;
-}
-.containerOfTextAndButton {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-.stateButtons {
-  display: flex;
-  justify-content: space-around;
-}
-#allB {
-  width: 6rem;
-}
-#activeB {
-  width: 6rem;
-}
-#completedB {
-  width: 6rem;
-}
-footer {
-  margin-top: 5rem;
-}
-.plus {
-  font-size: 3rem;
-} */
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-}
-.Container {
-  padding-top: 4.75rem;
-  background-color: #f3f5f7;
-  min-height: 100vh;
-}
-.Mainpart {
-  width: 377px;
-  padding: 24px 16px;
-  border-radius: 8px;
-  margin-inline: auto;
-  background-color: #fff;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.16);
-}
-.garchig {
-  color: #000;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.form1 {
-  display: flex;
-  height: 40px;
-  column-gap: 6px;
-} */
-/* .input1 {
-
-  outline: none;
-  font-size: 14px;
-  border-radius: 6px;
-  padding-inline: 16px;
-  border: 1px solid #e4e4e7;
-}
-.addButton {
-  width: 59px;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  color: #f9f9f9;
-  border-radius: 6px;
-  padding-inline: 16px;
-  background-color: #3c82f6;
-}
-.states {
-  height: 32px;
-  display: flex;
-  column-gap: 6px;
-  margin-block: 20px;
-} */
-/* .buttonAll {
-  border: none;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 500;
-  border-radius: 6px;
-  padding-inline: 12px;
-  transition: all 0.2s;
-} */
-
-/* .buttonCompleted,
-.buttonActive,
-.buttonAll {
-  border: none;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 500;
-  border-radius: 6px;
-  padding-inline: 12px;
-  transition: all 0.2s ease-in-out;
-}
-.footer {
-  font-size: 12px;
-  color: #6b7280;
-} */
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,700;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap");
 
 body {
@@ -156,8 +10,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Inter", serif;
-  height: 100vh;
-  box-sizing: border-box;
+  height: 100dvh;
 }
 
 .garchig {
@@ -177,7 +30,7 @@ body {
   flex-direction: column;
   margin-top: 60px;
   padding: 20px;
-  box-sizing: border-box;
+
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.16);
 }
@@ -217,6 +70,7 @@ body {
   border-radius: 6px;
   transition: 0.2s;
   cursor: "pointer";
+  border: none;
 }
 
 #add-button:hover {
@@ -224,7 +78,6 @@ body {
 }
 
 #task-states-section button {
-  width: auto;
   height: 32px;
   border-radius: 6px;
   background-color: #f3f4f6;
@@ -234,6 +87,7 @@ body {
   margin-top: 20px;
   margin-left: 1rem;
   transition: 0.2s;
+  border: none;
 }
 
 #task-states-section button:hover {
@@ -330,13 +184,7 @@ body {
   cursor: pointer;
   color: #ef4444;
   background-color: transparent;
-}
-
-button {
-  background-color: #3f51b5;
-  color: #ffffff;
-  border-radius: 6px;
-  cursor: "pointer";
+  border: none;
 }
 
 #containerFooter {
