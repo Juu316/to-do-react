@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import { v4 as uuidv4 } from "uuid"; // ID for our tasks
-
+import { Magixx } from "./_components/Magixx";
+import { Zontix } from "./_components/Zontix";
+import { Donk } from "./_components/Donk";
+import { Sh1ro } from "./_components/Sh1ro";
 function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -20,10 +23,16 @@ function App() {
       return;
     } else {
       setError("");
-      setTodos([
+      const newTodos = [
         ...todos,
         { text: inputValue, id: uuidv4(), status: "ACTIVE" },
-      ]);
+      ];
+      console.log("Updated todos:", newTodos); // Debugging
+      setTodos(newTodos);
+      // setTodos([
+      //   ...todos,
+      //   { text: inputValue, id: uuidv4(), status: "ACTIVE" },
+      // ]);
       setInputValue("");
       setNumberOfTasks(numberOfTasks + 1);
     }
@@ -80,93 +89,29 @@ function App() {
   return (
     <div>
       <div id="container">
-        <div id="main">
-          <div className="garchig">To-Do List</div>
-          <div className="inputAdd">
-            <input
-              id="input-box"
-              placeholder="Add a new task..."
-              value={inputValue}
-              onChange={handleInputChange}
-              onKeyDown={handlePressKey}
-              autoComplete="off"
-            />
+        <Magixx
+          inputValue={inputValue}
+          handleInputChange={handleInputChange}
+          handlePressKey={handlePressKey}
+          handleAddButtonClick={handleAddButtonClick}
+          error={error}
+        />
+        <Zontix
+          filterState={filterState}
+          handleFilterState={handleFilterState}
+        />
+        <Donk
+          todos={todos}
+          filterState={filterState}
+          handleBox={handleBox}
+          handleDeleteTask={handleDeleteTask}
+        />
+        <Sh1ro
+          numberOfTasks={numberOfTasks}
+          numberOfCompletedTasks={numberOfCompletedTasks}
+          handleClearCompleted={handleClearCompleted}
+        />
 
-            <button id="add-button" onClick={handleAddButtonClick}>
-              Add
-            </button>
-          </div>
-        </div>
-        {error.length > 1 && <div>{error}</div>}
-        <div id="task-states-section">
-          <button
-            id="all-tasks-button"
-            onClick={() => handleFilterState("All")}
-            className={filterState === "All" ? "active-filter" : ""}>
-            All
-          </button>
-          <button
-            id="active-tasks-button"
-            onClick={() => handleFilterState("ACTIVE")}
-            className={filterState === "ACTIVE" ? "active-filter" : ""}>
-            Active
-          </button>
-          <button
-            id="completed-tasks-button"
-            onClick={() => handleFilterState("COMPLETED")}
-            className={filterState === "COMPLETED" ? "active-filter" : ""}>
-            Completed
-          </button>
-          
-        </div>
-
-        <div id="task-list-container">
-          {todos
-            .filter((todo) => {
-              if (filterState === "All") {
-                return true;
-              } else {
-                return todo.status === filterState;
-              }
-            })
-            .map((todo, index) => (
-              <div id="list-container" key={todo.id}>
-                <input
-                  style={{ cursor: "pointer" }}
-                  id="check-box"
-                  type="checkbox"
-                  checked={todo.status === "COMPLETED"}
-                  onChange={() => handleBox(todo.id)}
-                />
-                <span
-                  id="task-text"
-                  className={
-                    todo.status === "COMPLETED" ? "completed-task" : ""
-                  }>
-                  {todo.text}
-                </span>
-
-                <button
-                  id="delete-button"
-                  onClick={() => handleDeleteTask(todo.id)}>
-                  Delete
-                </button>
-              </div>
-            ))}
-        </div>
-
-        <div id="number-of-tasks-section">
-          {numberOfTasks === 0 ? (
-            <p id="number-of-task">No tasks yet. Add one above!</p>
-          ) : (
-            <p id="number-of-task">
-              {numberOfCompletedTasks} of {numberOfTasks} tasks completed.
-            </p>
-          )}
-          <button id="clearCompleted-button" onClick={handleClearCompleted}>
-            Clear Completed
-          </button>
-        </div>
         <div id="containerFooter">
           <p id="footer">Made in Pinecone Academy</p>
         </div>
@@ -176,4 +121,3 @@ function App() {
 }
 
 export default App;
-
